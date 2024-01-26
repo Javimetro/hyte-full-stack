@@ -76,9 +76,9 @@ nav {
     margin-right: 120px;
     margin-left: 120px;
 }
-.overlayimage{
-    width: 400px;
-    height: 400px;
+.overlayImage{
+    width: 350px;
+    height: 350px;
     position: absolute;
     top: -160px;
     right: 20px;
@@ -107,6 +107,17 @@ h3{
     float: left;
     margin-left: 70px;
 }
+
+#target{
+    text-align:left;
+    border: 3px solid black;
+    margin-top: 100px;
+    margin-left: 450px;
+    margin-right: 450px;
+    padding-left: 20px;
+    background-image: url("images/back.jpg");
+}
+
 footer{
     height: 100px;
     margin-top: 150px;

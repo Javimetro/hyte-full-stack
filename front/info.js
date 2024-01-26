@@ -1,4 +1,5 @@
-window.onload = function() {
+window.addEventListener ('load', function() {
+    // Data taulukko
     var target = document.getElementById('target');
     var lang = navigator.language || navigator.userLanguage;
     target.innerHTML += '<p>Selaimen kieli: ' + lang + '</p>';
@@ -17,4 +18,13 @@ window.onload = function() {
     var dateString = date.toLocaleDateString('fi-Fi', {day: 'numeric', month: 'long', year: 'numeric'});
     var timeString = date.toLocaleTimeString('fi-Fi', {hour: '2-digit', minute: '2-digit'});
     target.innerHTML += '<p>Tänään on ' + dateString + ' ja kello on ' + timeString + '</p>';
-}
+
+    // Lisää overlay kuva
+    var box = document.querySelector('.box');
+    var overlay = document.createElement('img');
+
+    overlay.src = 'images/heart.png';
+    overlay.className = 'overlayImage';
+
+    box.appendChild(overlay)
+});
