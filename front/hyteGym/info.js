@@ -1,4 +1,5 @@
 window.addEventListener ('load', function() {
+    // Lisää tietoa selaimesta
     // Data taulukko
     var target = document.getElementById('target');
     var lang = navigator.language || navigator.userLanguage;
