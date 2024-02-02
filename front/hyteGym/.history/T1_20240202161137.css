@@ -1,0 +1,207 @@
+*{
+    box-sizing: border-box;
+}
+nav{
+    display: flex;
+    align-items: center;
+    text-align: left;
+}
+
+header{
+    font-family: Arial, sans-serif;
+    background-color: rgba(197, 161, 17, 0.4);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    border: none;
+    padding-left: 20px;
+    padding-top: 20px;
+    margin: 20px 120px 0 120px;
+    height: 150px;
+    overflow: auto;
+}
+header a{
+    text-decoration: none;
+    color: black;
+
+}
+
+.header-logo{
+    width: 150px;
+    height: 100px;
+    margin-right: 60px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 40px;
+    font-size: 30px;
+    vertical-align: bottom;
+    padding-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+    .header-logo {
+        margin-bottom: 30px;
+        width: 100px;
+        height: auto;
+    }
+    header {
+        margin-left: 0;
+        margin-right: 0;
+        height: auto;
+        border: none;
+    }
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+        
+    }
+
+    nav ul { 
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding-left: 0;
+    } 
+
+    nav ul li {
+        margin-right: 0;
+        margin-left: 0;
+        margin-bottom: 10px;
+        font-size: 90%;
+    }
+}
+
+body{
+    font-size: 20px;
+}   
+.background-div{
+    width: 1184px;
+    height: 300px;
+    margin-left:120px;
+    margin-right: 120px;
+    background-image: url("images/Cloudy.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+@media (max-width: 768px) {
+    .background-div {
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+.clear{
+     clear: both;
+     padding-top: 60px;
+}
+
+.mobileHow{
+    display: none;
+}
+
+.how{
+    text-align: center;
+    margin-left: 80px;
+}
+
+
+
+.defaultHow{
+    display: flex;
+    justify-content: center;
+    font-family: Arial, sans-serif;
+    margin-top: 0;
+    margin-bottom: 110px;
+    font-size: 30px;
+}
+
+.defaultHow .highlight{
+    color: #0d9ad3;
+}
+
+@media (max-width: 768px) {
+    .defaultHow {
+        display: none;
+    }
+    .mobileHow {
+        font-family: Arial, sans-serif;
+        font-size: 10px;
+        padding-top: 20px;
+        margin-top: 0;
+        display: block;
+        display: flex;
+        justify-content: center;
+    }
+}
+.box{
+    font-family: Arial, sans-serif;
+    position: relative;
+    text-align: center;
+    background-image: url("images/Contour Line.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 40px 10px 60px 10px;
+    padding-top: 100px;
+    margin-top: 250px;
+    margin-right: 120px;
+    margin-left: 120px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+.overlayImage{
+    width: 350px;
+    height: 350px;
+    position: absolute;
+    top: -160px;
+    right: 20px;
+}
+h2{
+    text-align: left;
+    padding-right: 150px;
+    padding-left: 100px;
+    color: darkgoldenrod;
+}
+h3{
+    text-align: left;
+    padding-right: 150px;
+    padding-left: 100px;
+    color: chocolate;
+}
+#textbox{
+    text-align: left;
+    font-size: 25px;
+    padding-right: 150px;
+    padding-left: 100px;
+}
+.hippo-image{
+    width: 270px;
+    height: 250px;
+    float: left;
+    margin-left: 70px;
+}
+
+#target{
+    text-align:left;
+    border: 3px solid black;
+    margin-top: 100px;
+    margin-left: 450px;
+    margin-right: 450px;
+    padding-left: 20px;
+    background-image: url("images/back.jpg");
+}
+
+footer{
+    height: 100px;
+    margin-top: 150px;
+    margin-bottom: 50px;
+    background-color: pink;
+    text-align: center;
+    padding-top: 30px;
+}
