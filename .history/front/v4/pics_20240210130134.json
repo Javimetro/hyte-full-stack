@@ -1,0 +1,78 @@
+{
+  "catImages":[
+  {
+      "id": "60i",
+      "url": "https://cdn2.thecatapi.com/images/60i.jpg",
+      "width": 170,
+      "height": 135
+  },
+  {
+      "id": "6he",
+      "url": "https://cdn2.thecatapi.com/images/6he.jpg",
+      "width": 500,
+      "height": 389
+  },
+  {
+      "id": "7cn",
+      "url": "https://cdn2.thecatapi.com/images/7cn.jpg",
+      "width": 500,
+      "height": 333
+  },
+  {
+      "id": "ck9",
+      "url": "https://cdn2.thecatapi.com/images/ck9.jpg",
+      "width": 500,
+      "height": 334
+  },
+  {
+      "id": "cvi",
+      "url": "https://cdn2.thecatapi.com/images/cvi.jpg",
+      "width": 500,
+      "height": 500
+  },
+  {
+      "id": "e4t",
+      "url": "https://cdn2.thecatapi.com/images/e4t.jpg",
+      "width": 601,
+      "height": 400
+  },
+  {
+      "id": "MTU4NTU3OA",
+      "url": "https://cdn2.thecatapi.com/images/MTU4NTU3OA.jpg",
+      "width": 720,
+      "height": 960
+  },
+  {
+      "id": "MjA4MzU0Mw",
+      "url": "https://cdn2.thecatapi.com/images/MjA4MzU0Mw.jpg",
+      "width": 4272,
+      "height": 2848
+  },
+  {
+      "id": "Fb9fWJuJq",
+      "url": "https://cdn2.thecatapi.com/images/Fb9fWJuJq.jpg",
+      "width": 1224,
+      "height": 1224
+  },
+  {
+      "id": "_PEqOH17A",
+      "url": "https://cdn2.thecatapi.com/images/_PEqOH17A.jpg",
+      "width": 800,
+      "height": 1067
+  }
+],
+"diaryEntries": [
+  {
+    "day": "1.1.2024",
+    "description": "Greetings from the Hippo Gym! This week, I've been focusing on my fitness journey. I started with gentle exercises to loosen up my muscles and get my body moving. I've been incorporating stretches and yoga poses into my daily routine, along with short walks around the jungle to soak up the fresh air and sunshine.",
+    "address": "images/strong.png"
+  },
+  {
+    "day": "2.1.2024",
+    "description": "Hello again! Week two of my fitness adventure has been quite exhilarating. I've ramped up my workouts by adding strength training exercises to the mix. I've been lifting logs and pushing heavy rocks to build up my strength and muscle tone. Plus, I've been hitting the water for some invigorating swimming sessions to boost my cardiovascular health.",
+    "address": "images/strong.png"
+  }
+]
+}
+
+
