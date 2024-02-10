@@ -29,7 +29,7 @@ async function giveMeCats() {
     }
     const kissaData = await response.json();
     ///const catImages = diaryData.catImages;
-    const urlArray = kissaData.catImages.map(item => item.url);
+    const urlArray = kissaData.map(item => item.url);
 
     const imageContainer = document.querySelector('.showKissa');
     imageContainer.id = 'kissaContainer';
