@@ -4,7 +4,7 @@ import path from 'path';
 import {fileURLToPath} from 'url';
 import itemRouter from './routes/item-router.mjs';
 import userRouter from './routes/user-router.mjs';
-import entryRouter from './routes/entries-router.mjs';
+import userRouter from './routes/entries-router.mjs';
 const hostname = '127.0.0.1';
 const port = 3000;
 const app = express();
