@@ -25,7 +25,7 @@ const updatePasswords = async () => {
 };
 
 // Call the function to update passwords for all users
-// updatePasswords();
+updatePasswords();
 
 
 const listAllUsers = async () => {

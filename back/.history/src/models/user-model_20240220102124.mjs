@@ -1,21 +1,20 @@
 import promisePool from '../utils/database.mjs';
-import bcrypt from 'bcryptjs';
 
-
-
-const updatePasswords = async () => {
+// Function to update passwords for all users
+const updatePasswordsForAllUsers = async () => {
   try {
     // Retrieve all users from the database
     const sql = 'SELECT user_id, password FROM Users';
-    const [result] = await promisePool.query(sql);
+    const [rows] = await promisePool.query(sql);
+    console.log(rows)
 
     // Iterate over the users and update their passwords
-    for (const row of result) {
+    for (const row of rows) {
       const hashedPassword = await bcrypt.hash(row.password, 10);
 
       // Update the user's password in the database
-      const updateQuery = 'UPDATE Users SET password = ? WHERE user_id = ?';
-      await promisePool.query(updateQuery, [hashedPassword, row.user_id]);
+      const updateQuery = 'UPDATE Users SET password = ? WHERE id = ?';
+      await promisePool.query(updateQuery, [hashedPassword, row.id]);
     }
 
     console.log('All passwords updated successfully');
@@ -25,8 +24,7 @@ const updatePasswords = async () => {
 };
 
 // Call the function to update passwords for all users
-// updatePasswords();
-
+updatePasswordsForAllUsers();
 
 const listAllUsers = async () => {
   try {

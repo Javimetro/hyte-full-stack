@@ -1,32 +1,4 @@
-import promisePool from '../utils/database.mjs';
-import bcrypt from 'bcryptjs';
-
-
-
-const updatePasswords = async () => {
-  try {
-    // Retrieve all users from the database
-    const sql = 'SELECT user_id, password FROM Users';
-    const [result] = await promisePool.query(sql);
-
-    // Iterate over the users and update their passwords
-    for (const row of result) {
-      const hashedPassword = await bcrypt.hash(row.password, 10);
-
-      // Update the user's password in the database
-      const updateQuery = 'UPDATE Users SET password = ? WHERE user_id = ?';
-      await promisePool.query(updateQuery, [hashedPassword, row.user_id]);
-    }
-
-    console.log('All passwords updated successfully');
-  } catch (error) {
-    console.error('Error updating passwords:', error);
-  }
-};
-
-// Call the function to update passwords for all users
-// updatePasswords();
-
+import promisePool from '../utils/database.mjs';console.log
 
 const listAllUsers = async () => {
   try {
@@ -108,12 +80,13 @@ const deleteUserById = async (id) => {
 };
 
 // Used for login
-const selectUserByUsername = async (username) => {
+const selectUserByUsernameAndPassword = async (username, password) => {
   try {
-    const sql = 'SELECT * FROM Users WHERE username=?';
-    const params = [username];
+    console.log("selecting by name and password...")
+    const sql = 'SELECT * FROM Users WHERE username=? AND password=?';
+    const params = [username, password];
     const [rows] = await promisePool.query(sql, params);
-    // console.log(rows);
+    console.log(rows);
     // if nothing is found with the username, login attempt has failed
     if (rows.length === 0) {
       return {error: 401, message: 'invalid username or password'};
@@ -131,5 +104,5 @@ export {
   insertUser,
   updateUserById,
   deleteUserById,
-  selectUserByUsername,
+  selectUserByUsernameAndPassword,
 };
