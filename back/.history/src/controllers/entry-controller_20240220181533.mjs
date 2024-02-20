@@ -86,12 +86,12 @@ const getAvgHoursSleptByUserId = async (req, res) => {
     const loggedInUserId = req.user.user_id; // Get ID of the logged-in user
 
     // Check if the logged-in user matches the requested user ID
-    if (parseInt(userId, 10) !== loggedInUserId) {
+    if (userId !== loggedInUserId) {
       return res.status(403).json({ error: 'Forbidden', message: 'You are not authorized to view this user\'s stats.' });
     }
 
     // Calculate and return the average hours slept by the logged-in user
-    const averageHoursSlept = await avgHoursSleptCalculator(userId); // Pass userId instead of req
+    const averageHoursSlept = await avgHoursSleptCalculator(req);
     res.json({ userId, averageHoursSlept });
   } catch (error) {
     console.error('Error fetching average hours slept:', error);
