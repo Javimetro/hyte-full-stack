@@ -124,17 +124,3 @@ content-type: application/json
 {
   "username": "Newuser"
 }
-
-POST http://localhost:3000/api/auth/login
-Content-Type: application/json
-
-{
-  "username": "usernelja",
-  "password": "44444444"
-}
-
-### Get my user info
-GET http://localhost:3000/api/auth/me
-{
-  "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjo0LCJ1c2VybmFtZSI6InVzZXJuZWxqYSIsImVtYWlsIjoibmVsamFAZXhhbXBsZS5jb20iLCJjcmVhdGVkX2F0IjoiMjAyNC0wMS0wNVQwNTo0NTowMC4wMDBaIiwidXNlcl9sZXZlbCI6InJlZ3VsYXIiLCJpYXQiOjE3MDg0MjE3NDksImV4cCI6MTcwODUwODE0OX0.BgArlxRkNrgkHJHM_pxW6n1cDDwtmTSRLKd0GC_Rj-I"
-}

@@ -14,7 +14,7 @@ const postLogin = async (req, res) => {
     return res.status(user.error).json(user);
   }
   // compare password and hash, if match, login successful
-  const match = await bcrypt.compare(password, user.password); // user.password = hashed password
+  const match = await bcrypt.compare(password, user.password);
   // console.log(user.password)
   //console.log(match)
   if (match) {

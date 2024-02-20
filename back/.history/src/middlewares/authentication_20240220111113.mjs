@@ -1,15 +1,11 @@
 import jwt from 'jsonwebtoken';
 import 'dotenv/config'; //This line imports the dotenv library and immediately invokes its config method. dotenv is used to load environment variables from a .env file into process.env.
-/*
-Authentication Middleware:
-The authenticateToken middleware is used to authenticate requests before they reach the route handler. This middleware checks if the request includes a valid JWT token in the Authorization header and verifies it.
-If the token is valid, it attaches the decoded user information to the req.user object.
-*/
+
 const authenticateToken = (req, res, next) => {
   console.log('authenticateToken', req.headers);
   const authHeader = req.headers['authorization']; //It first extracts the Authorization header from the incoming request
   const token = authHeader && authHeader.split(' ')[1]; //The Authorization header typically follows the format Bearer <token>. The function splits the header value by space (authHeader.split(' ')[1]) to extract the token part.
-  console.log('token', token);
+  console.log('tokeeen', token);
   if (!token) {
     return res.sendStatus(401);
   }

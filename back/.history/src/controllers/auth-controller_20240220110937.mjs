@@ -14,8 +14,8 @@ const postLogin = async (req, res) => {
     return res.status(user.error).json(user);
   }
   // compare password and hash, if match, login successful
-  const match = await bcrypt.compare(password, user.password); // user.password = hashed password
-  // console.log(user.password)
+  const match = await bcrypt.compare(password, user.password);
+  console.log(user.password)
   //console.log(match)
   if (match) {
     delete user.password; // If the passwords match, the function deletes the password from the user object (to avoid sending it in the response),
