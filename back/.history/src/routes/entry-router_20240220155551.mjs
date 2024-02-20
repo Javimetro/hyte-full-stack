@@ -12,6 +12,6 @@ const entryRouter = express.Router();
 
 entryRouter.route('/').get(authenticateToken, getEntries).post(postEntry);
 
-entryRouter.route('/:id').get(authenticateToken, getEntryById).put(putEntry).delete(deleteEntry);
+entryRouter.route('/:id').get(getEntryById).put(putEntry).delete(deleteEntry);
 
 export default entryRouter;

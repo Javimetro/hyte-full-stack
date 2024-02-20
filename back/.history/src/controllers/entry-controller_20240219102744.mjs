@@ -19,19 +19,7 @@ const getEntries = async (req, res) => {
   }
 };
 
-// now only admins can check other users entries
 const getEntryById = async (req, res) => {
-  // Check if the user is authenticated (has a valid JWT token)
-  if (!req.user) {
-    return res.status(401).json({ error: 401, message: 'Unauthorized: User not authenticated' });
-  }
-
-  // Check if the authenticated user is an admin
-  if (req.user.user_level !== 'admin') {
-    return res.status(403).json({ error: 403, message: 'Forbidden: Insufficient permissions' });
-  }
-
-  // Proceed with retrieving the entry if the user is authenticated and is an admin
   const entry = await findEntryById(req.params.id);
   if (entry) {
     res.json(entry);

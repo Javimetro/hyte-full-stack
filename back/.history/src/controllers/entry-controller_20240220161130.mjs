@@ -19,7 +19,6 @@ const getEntries = async (req, res) => {
   }
 };
 
-// now only admins can check other users entries
 const getEntryById = async (req, res) => {
   // Check if the user is authenticated (has a valid JWT token)
   if (!req.user) {
