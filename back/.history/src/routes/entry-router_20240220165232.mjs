@@ -5,7 +5,7 @@ import {
   postEntry,
   putEntry,
   deleteEntry,
-  getAvgHoursSleptByUserId,
+  getStatsById,
 } from '../controllers/entry-controller.mjs';
 import {authenticateToken} from '../middlewares/authentication.mjs';
 
@@ -15,6 +15,6 @@ entryRouter.route('/').get(authenticateToken, getEntries).post(postEntry);
 
 entryRouter.route('/:id').get(authenticateToken, getEntryById).put(putEntry).delete(deleteEntry);
 
-entryRouter.route('/stats/:id').get(authenticateToken, getAvgHoursSleptByUserId);
+entryRouter.route('/stats/:id').get(authenticateToken, getStatsById);
 
 export default entryRouter;
